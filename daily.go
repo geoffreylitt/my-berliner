@@ -2,7 +2,7 @@ package main
 
 import (
 	// "time"
-	"os"
+	// "os"
 
 	"github.com/s3ththompson/berliner"
 	s "github.com/s3ththompson/berliner/sources"
@@ -31,15 +31,15 @@ func main() {
 	b.Renderer(r.HTML("berliner.html", "bootstrap", "bootstrap"))
 
 	// Render to Email using Gmail SMTP server
-	emailParams := r.EmailParams{
-		SmtpServer: "smtp.gmail.com",
-		SmtpPort: 465,
-		SmtpUsername: "gklitt@gmail.com",
-		SmtpPassword: os.Getenv("SMTP_PASSWORD"),
-		FromAddress: "gklitt@gmail.com",
-		ToAddress: "gklitt@gmail.com",
-	}
-	b.Renderer(r.Email(emailParams, "bootstrap", "bootstrap"))
+	// emailParams := r.EmailParams{
+	// 	SmtpServer: "smtp.gmail.com",
+	// 	SmtpPort: 465,
+	// 	SmtpUsername: "gklitt@gmail.com",
+	// 	SmtpPassword: os.Getenv("SMTP_PASSWORD"),
+	// 	FromAddress: "gklitt@gmail.com",
+	// 	ToAddress: "gklitt@gmail.com",
+	// }
+	// b.Renderer(r.Email(emailParams, "bootstrap", "bootstrap"))
 	// Or, write posts to JSON for future use
 	// b.Renderer(r.ToJSON("berliner.json"))
 	b.Go()
